@@ -1,12 +1,17 @@
-
+import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
+import Login from "./components/Login";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-     <h2>
-      This is LinkedIn App clone
-     </h2>
+     <Router>
+      <Switch>
+        <Route exact path="/">
+          <Login></Login>
+        </Route>
+      </Switch>
+     </Router>
     </div>
   );
 }
